@@ -1,0 +1,104 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Maintenance Services{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-12">
+    <!-- Hero Section -->
+    <div class="text-center mb-16">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Maintenance Services</h1>
+        <p class="text-xl text-gray-600">Professional Care for Your Hatchery Equipment</p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+            <div class="text-center mb-4">
+                <i class="fas fa-tools text-blue-600 text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Preventive Maintenance</h3>
+            <ul class="text-gray-600 space-y-2">
+                <li><i class="fas fa-check text-green-500 mr-2"></i>Regular system inspections</li>
+                <li><i class="fas fa-check text-green-500 mr-2"></i>Equipment calibration</li>
+                <li><i class="fas fa-check text-green-500 mr-2"></i>Performance optimization</li>
+                <li><i class="fas fa-check text-green-500 mr-2"></i>Component cleaning</li>
+            </ul>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+            <div class="text-center mb-4">
+                <i class="fas fa-wrench text-blue-600 text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Repair Services</h3>
+            <ul class="text-gray-600 space-y-2">
+                <li><i class="fas fa-check text-green-500 mr-2"></i>Emergency repairs</li>
+                <li><i class="fas fa-check text-green-500 mr-2"></i>Part replacement</li>
+                <li><i class="fas fa-check text-green-500 mr-2"></i>System troubleshooting</li>
+                <li><i class="fas fa-check text-green-500 mr-2"></i>Technical support</li>
+            </ul>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+            <div class="text-center mb-4">
+                <i class="fas fa-chart-line text-blue-600 text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Performance Monitoring</h3>
+            <ul class="text-gray-600 space-y-2">
+                <li><i class="fas fa-check text-green-500 mr-2"></i>Real-time monitoring</li>
+                <li><i class="fas fa-check text-green-500 mr-2"></i>Data analysis</li>
+                <li><i class="fas fa-check text-green-500 mr-2"></i>Efficiency reports</li>
+                <li><i class="fas fa-check text-green-500 mr-2"></i>System optimization</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Maintenance Plans -->
+    <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Maintenance Plans</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="border rounded-lg p-6 hover:border-blue-500 transition duration-300">
+                <h3 class="text-xl font-bold text-center mb-4">Basic Plan</h3>
+                <ul class="text-gray-600 space-y-2 mb-6">
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Quarterly inspections</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Basic maintenance</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Email support</li>
+                </ul>
+                <div class="text-center">
+                    <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300">Learn More</button>
+                </div>
+            </div>
+
+            <div class="border rounded-lg p-6 hover:border-blue-500 transition duration-300">
+                <h3 class="text-xl font-bold text-center mb-4">Standard Plan</h3>
+                <ul class="text-gray-600 space-y-2 mb-6">
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Monthly inspections</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Priority support</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Parts discount</li>
+                </ul>
+                <div class="text-center">
+                    <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300">Learn More</button>
+                </div>
+            </div>
+
+            <div class="border rounded-lg p-6 hover:border-blue-500 transition duration-300">
+                <h3 class="text-xl font-bold text-center mb-4">Premium Plan</h3>
+                <ul class="text-gray-600 space-y-2 mb-6">
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Weekly inspections</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>24/7 support</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Full coverage</li>
+                </ul>
+                <div class="text-center">
+                    <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact CTA -->
+    <div class="bg-blue-600 text-white rounded-lg p-8 text-center">
+        <h2 class="text-3xl font-bold mb-4">Need Maintenance Support?</h2>
+        <p class="mb-6">Our expert team is ready to help maintain your equipment at peak performance</p>
+        <button class="bg-white text-blue-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition duration-300">Contact Us Now</button>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "base/base.html" %}
+{% block title %}Product Details{% endblock %}
+{% block content %}
+<section class="container mx-auto px-4 py-16">
+    <h1 class="text-4xl font-bold text-gray-800 mb-8 text-center">Hatch Smarter, Not Harder with Hatchfriend!</h1>
+
+    <!-- Product Features -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Feature 1 -->
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-2xl font-bold text-blue-600 mb-4">1. Egg-straordinary Efficiency</h2>
+            <p class="text-gray-700">
+                Our machines bring in a cluck-worthy 75% efficiency rate—now that’s something to crow about!
+            </p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-2xl font-bold text-blue-600 mb-4">2. Huge Capacity, Huge Impact</h2>
+            <p class="text-gray-700">
+                Hatch more eggs at once and watch your poultry dreams take flight.
+            </p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-2xl font-bold text-blue-600 mb-4">3. Easy-Peasy Monitoring</h2>
+            <p class="text-gray-700">
+                Keep an eye on the action with our super simple, stress-free monitoring system.
+            </p>
+        </div>
+        <!-- Feature 4 -->
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-2xl font-bold text-blue-600 mb-4">4. Top-Notch After-Hatching Service</h2>
+            <p class="text-gray-700">
+                We’re not done when the eggs hatch. Our climate service makes sure your chicks feel right at home.
+            </p>
+        </div>
+    </div>
+
+    <!-- Payment Plan Section -->
+    <div class="bg-blue-50 p-8 rounded-lg shadow mt-12 text-center">
+        <p class="text-xl text-gray-800 mb-4">
+            Making hatching magic accessible to everyone! With our friendly payment plans, even smaller farms can get in on the action. Let’s make poultry dreams possible together, one hatch at a time!
+        </p>
+        <a href="{%url 'contact'%}" class="bg-blue-600 text-white px-6 py-3 rounded-full text-lg hover:bg-blue-700">
+            Egg-cited yet? Contact us for a fun, personalized demo today!
+        </a>
+    </div>
+</section>
+{% endblock %}
