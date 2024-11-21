@@ -1,0 +1,79 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Suppliers{% endblock %}
+
+{% block content %}
+<div class="flex flex-col md:flex-row min-h-screen bg-gray-100">
+    <!-- Sidebar -->
+    <div class="w-full md:w-64 bg-white shadow-lg md:min-h-screen">
+        <div class="p-4">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Districts</h2>
+            <div class="space-y-2">
+                <!-- District buttons -->
+                <button onclick="showSuppliers('kayonza')" class="w-full text-left px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition duration-200">
+                    kayonza
+                </button>
+                <button onclick="showSuppliers('kamonyi')" class="w-full text-left px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition duration-200">
+                    kamonyi
+                </button>
+                <button onclick="showSuppliers('muhanga')" class="w-full text-left px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition duration-200">
+                    Muhanga
+                </button>
+                <!-- Add more districts as needed -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-8">
+        <!-- Supplier Cards Container -->
+        <div id="suppliers-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Supplier cards will be dynamically loaded here -->
+        </div>
+    </div>
+</div>
+
+<script>
+    function showSuppliers(district) {
+        const container = document.getElementById('suppliers-container');
+        container.innerHTML = ''; // Clear existing content
+
+        // Sample supplier data - Replace with your actual data
+        const suppliersData = {
+            'kayonza': [
+                { name: 'Supplier 1', phone: '+256 123456789', address: 'kayonza mu centre', speciality: 'Layer Chicks' },
+                { name: 'Supplier 2', phone: '+256 987654321', address: 'kayonza mwikoni', speciality: 'Broiler Chicks' }
+            ],
+            'kamonyi': [
+                { name: 'Supplier 3', phone: '+256 456789123', address: 'kamonyi nyamiyaga', speciality: 'Equipment' },
+                { name: 'Supplier 4', phone: '+256 789123456', address: 'kamonyi kidahwe', speciality: 'Feeds' }
+            ],
+            'muhanga': [
+                { name: 'Supplier 5', phone: '+256 321654987', address: 'muhanga ruvumera', speciality: 'Vaccines' },
+                { name: 'Supplier 6', phone: '+256 147258369', address: 'Muhanga karagwe', speciality: 'Day-old Chicks' }
+            ]
+        };
+
+        // Create and append supplier cards
+        suppliersData[district].forEach(supplier => {
+            const card = `
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">${supplier.name}</h3>
+                    <div class="space-y-2 text-gray-600">
+                        <p><i class="fas fa-phone mr-2 text-blue-600"></i>${supplier.phone}</p>
+                        <p><i class="fas fa-map-marker-alt mr-2 text-blue-600"></i>${supplier.address}</p>
+                        <p><i class="fas fa-tag mr-2 text-blue-600"></i>${supplier.speciality}</p>
+                    </div>
+                    <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">
+                        Contact Supplier
+                    </button>
+                </div>
+            `;
+            container.innerHTML += card;
+        });
+    }
+
+    // Show Kampala suppliers by default
+    showSuppliers('kayonza');
+</script>
+{% endblock %}

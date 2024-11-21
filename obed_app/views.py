@@ -12,3 +12,7 @@ def mentaince(request):
     return render(request, 'pages/mentainance.html')
 def feature(request):
     return render(request, 'pages/feature.html')
+def supplier(request):
+    return render(request, 'pages/supplier.html')
+def make_an_order(request):
+    return render(request, 'pages/make_an_order.html')
